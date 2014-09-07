@@ -1,6 +1,7 @@
-package info.nicholasvaidyanathan.crackingthecodingInterview.ch1;
+package info.nicholasvaidyanathan.crackingthecodinginterview.ch1;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class StringDecorator {
@@ -24,6 +25,20 @@ public class StringDecorator {
                 alreadySeen.add(aChar);
             }
             return true;
+        }
+    }
+
+    public String removeDuplicateCharacters() {
+        if (hasUniqueCharacters()) {
+            return testo;
+        } else {
+            final StringBuilder deduped = new StringBuilder();
+            for (char aChar : testo.toCharArray()) {
+                if (deduped.indexOf(Character.toString(aChar)) == -1) {
+                    deduped.append(aChar);
+                }
+            }
+            return deduped.toString();
         }
     }
 }

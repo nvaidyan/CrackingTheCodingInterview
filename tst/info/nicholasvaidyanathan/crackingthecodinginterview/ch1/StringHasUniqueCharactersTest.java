@@ -1,13 +1,9 @@
 package info.nicholasvaidyanathan.crackingthecodinginterview.ch1;
 
-import info.nicholasvaidyanathan.crackingthecodingInterview.ch1.StringDecorator;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by Master on 9/4/2014.
- */
 public class StringHasUniqueCharactersTest {
     @Test
     public void correctlyIdentifiesXfinity() {
