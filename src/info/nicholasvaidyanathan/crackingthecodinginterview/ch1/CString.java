@@ -8,9 +8,9 @@ public class CString {
             throw new IllegalArgumentException("don't accept null");
         }
         final int length = seq.length();
-        input = new char[length+1];
+        input = new char[length + 1];
         for (int i = 0; i < length; i++) {
-             input[i] = seq.charAt(i);
+            input[i] = seq.charAt(i);
         }
         input[length] = '\0';
     }
