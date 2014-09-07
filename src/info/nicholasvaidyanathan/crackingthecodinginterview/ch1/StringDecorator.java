@@ -1,4 +1,4 @@
-package info.ni;
+package info.nicholasvaidyanathan.crackingthecodingInterview.ch1;
 
 import java.util.ArrayList;
 import java.util.List;

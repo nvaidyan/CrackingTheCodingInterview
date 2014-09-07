@@ -1,4 +1,6 @@
-import info.ni.StringDecorator;
+package info.nicholasvaidyanathan.crackingthecodinginterview.ch1;
+
+import info.nicholasvaidyanathan.crackingthecodingInterview.ch1.StringDecorator;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
