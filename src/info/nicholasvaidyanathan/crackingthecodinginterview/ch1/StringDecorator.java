@@ -40,4 +40,11 @@ public class StringDecorator {
             return deduped.toString();
         }
     }
+
+    public String htmlEscapeSpace() {
+        if (testo == null) {
+            return null;
+        }
+        return testo.replace(" ", "%20");
+    }
 }
