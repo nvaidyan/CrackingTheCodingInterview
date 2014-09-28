@@ -1,15 +1,11 @@
 package info.nicholasvaidyanathan.crackingthecodinginterview.ch2;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class SinglyLinkedNode<T> implements FilterableLinkedNode<T> {
+public class SinglyLinkedNode<T> implements LinkedNode<T> {
     T data;
     LinkedNode<T> next;
 
     public SinglyLinkedNode(T data) {
         this.data = data;
-
         next = null;
     }
 
@@ -37,36 +33,8 @@ public class SinglyLinkedNode<T> implements FilterableLinkedNode<T> {
     }
 
     @Override
-    public boolean contains(T data) {
-        if (getData().equals(data)) {
-            return true;
-        } else {
-            LinkedNode<T> last = getNext();
-            while (last != null) {
-                if (last.getData().equals(data)) {
-                    return true;
-                }
-                last = last.getNext();
-            }
-            return false;
-        }
-    }
-
-    @Override
-    public void removeDuplicates() {
-        SinglyLinkedNode<T> previous = null;
-        List<T> seen = new ArrayList<T>();
-        SinglyLinkedNode<T> it = this;
-        while (it != null) {
-            final T data = it.getData();
-            if (seen.contains(data)) {
-                previous.next = it.next;
-            } else {
-                seen.add(data);
-                previous = it;
-            }
-            it = (SinglyLinkedNode) it.next;
-        }
+    public void accept(LinkedNodeVisitor visitor) {
+        visitor.visit(this);
     }
 
     @Override

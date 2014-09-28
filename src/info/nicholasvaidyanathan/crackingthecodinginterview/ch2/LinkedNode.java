@@ -6,4 +6,6 @@ public interface LinkedNode<T> {
     LinkedNode<T> getNext();
 
     void append(LinkedNode<T> next);
+
+    void accept(LinkedNodeVisitor visitor);
 }
