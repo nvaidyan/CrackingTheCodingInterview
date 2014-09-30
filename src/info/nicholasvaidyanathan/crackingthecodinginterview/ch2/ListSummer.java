@@ -1,10 +1,5 @@
 package info.nicholasvaidyanathan.crackingthecodinginterview.ch2;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-
 public class ListSummer {
     public LinkedNode<Number> sum(LinkedNode<Number> num1, LinkedNode<Number> num2) {
         final Number first = toNumber(num1);
