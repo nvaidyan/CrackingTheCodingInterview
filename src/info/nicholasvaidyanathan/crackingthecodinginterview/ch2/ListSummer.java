@@ -15,15 +15,9 @@ public class ListSummer {
     }
 
     Number toNumber(LinkedNode<Number> number) {
-        int place = 0;
-        double runningSum = 0;
-        LinkedNode<Number> it = number;
-        while (it != null) {
-            runningSum += Math.pow(10,place) * it.getData().doubleValue();
-            it = it.getNext();
-            place = place + 1;
-        }
-        return runningSum;
+        SumVisitor visitor = new SumVisitor();
+        visitor.visit(number);
+        return visitor.getSum();
     }
 
     Number sum(Number first, Number second) {
