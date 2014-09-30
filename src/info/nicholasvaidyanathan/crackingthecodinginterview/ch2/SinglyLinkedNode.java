@@ -1,6 +1,6 @@
 package info.nicholasvaidyanathan.crackingthecodinginterview.ch2;
 
-public class SinglyLinkedNode<T> implements LinkedNode<T> {
+public class SinglyLinkedNode<T> implements MutableLinkedNode<T> {
     T data;
     LinkedNode<T> next;
 
@@ -17,6 +17,16 @@ public class SinglyLinkedNode<T> implements LinkedNode<T> {
     @Override
     public LinkedNode<T> getNext() {
         return next;
+    }
+
+    @Override
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    @Override
+    public void setNext(LinkedNode<T> next) {
+        this.next = next;
     }
 
     @Override
