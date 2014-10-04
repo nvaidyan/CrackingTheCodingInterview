@@ -23,6 +23,28 @@ public class LongestContiguousSubsequenceTest {
     }
 
     @Test
+    public void farooqCrap() {
+        int[] inputs = new int[] {1,2,-4,1,3,-2,3,-1};
+        toTest = new ListSumCalculator();
+        assertEquals(5, toTest.findMaxContigous(inputs));
+    }
+
+    @Test(expected=NullPointerException.class)
+    public void farooqCrapHandlesNull() {
+        int[] inputs = null;
+        toTest = new ListSumCalculator();
+        assertEquals(0, toTest.findMaxContigous(inputs));
+    }
+
+    @Test
+    public void farooqCrapWithMaxInt() {
+        int[] inputs = new int[] {1,Integer.MAX_VALUE,-4,1,3,30,3,-1};
+        toTest = new ListSumCalculator();
+        assertEquals(Integer.MAX_VALUE, toTest.findMaxContigous(inputs));
+    }
+
+
+    @Test
     public void handlesNull() {
         List<Integer> inputs = null;
         toTest = new ListSumCalculator();
